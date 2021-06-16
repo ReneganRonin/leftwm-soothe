@@ -36,10 +36,6 @@ if [ -x "$(command -v flameshot)" ]; then
 	flameshot &
 fi
 
-if [ -x "$(command -v redshift)" ]; then
-	redshift -l 83:123 &
-fi
-
 if [ -x "$(command -v blueman-applet)" ]; then
 	blueman-applet &
 fi
@@ -48,16 +44,16 @@ if [ -x "$(command -v nm-applet)" ]; then
 	nm-applet &
 fi
 
+if [ -x "$(command -v copyq)" ]; then
+	copyq &
+fi
+
 if [ -x "$(command -v pipewire)" ]; then
-	pipewire &
+       pipewire &
 fi
 
 if [ -x "$(command -v pipewire-pulse)" ]; then
-	pipewire-pulse &
-fi
-
-if [ -x "$(command -v copyq)" ]; then
-	copyq
+       pipewire-pulse &
 fi
 
 index=0

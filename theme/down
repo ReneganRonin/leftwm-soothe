@@ -19,4 +19,4 @@ pkill spotifyd
 pkill flameshot
 pkill redshift
 pkill copyq
-
+pkill spotifyd
