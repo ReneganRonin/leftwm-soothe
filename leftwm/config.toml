@@ -1,17 +1,50 @@
 modkey = "Mod4"
+mousekey = "Mod4"
 workspaces = []
-tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+tags = ["","","", "", "", "", "","",""]
+layouts = ["MainAndVertStack", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack", "MainAndHorizontalStack"]
+disable_current_tag_swap = true
 
 [[keybind]]
 command = "Execute"
-value = "rofi -show drun"
-modifier = ["Mod1"]
-key = "space"
-
-[[keybind]]
-command = "Execute"
-value = "alacritty"
+value = "$HOME/arch-sway-dotfiles/scripts/launcher.sh"
 modifier = ["modkey"]
+key = "p"
+
+[[keybind]]
+command = "Execute"
+value = "rofi-pass"
+modifier = ["modkey"]
+key = "o"
+
+[[keybind]]
+command = "Execute"
+value = "firefox"
+modifier = ["modkey"]
+key = "i"
+
+[[keybind]]
+command = "Execute"
+value = "thunar"
+modifier = ["modkey"]
+key = "t"
+
+[[keybind]]
+command = "Execute"
+value = "flameshot full -c -p $HOME/Pictures/Screenshots/"
+modifier = []
+key = "Print"
+
+[[keybind]]
+command = "Execute"
+value = "flameshot gui -p $HOME/Pictures/Screenshots/"
+modifier = ["modkey"]
+key = "Print"
+
+[[keybind]]
+command = "Execute"
+value = "kitty"
+modifier = ["modkey", "Shift"]
 key = "Return"
 
 [[keybind]]
@@ -55,6 +88,11 @@ key = "Up"
 command = "MoveWindowDown"
 modifier = ["modkey", "Shift"]
 key = "Down"
+
+[[keybind]]
+command = "MoveWindowTop"
+modifier = ["modkey"]
+key = "Return"
 
 [[keybind]]
 command = "FocusWindowUp"
