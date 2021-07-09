@@ -1,13 +1,13 @@
 modkey = "Mod4"
 mousekey = "Mod4"
 workspaces = []
-tags = ["","","", "", "", "", "","",""]
+tags = ["ﳐ","","", "", "", "", "","",""]
 layouts = ["MainAndVertStack", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack", "MainAndHorizontalStack"]
 disable_current_tag_swap = true
 
 [[keybind]]
 command = "Execute"
-value = "$HOME/arch-sway-dotfiles/scripts/launcher.sh"
+value = "$HOME/dotfiles/scripts/launcher.sh"
 modifier = ["modkey"]
 key = "p"
 
@@ -231,3 +231,8 @@ command = "MoveToTag"
 value = "9"
 modifier = ["modkey", "Shift"]
 key = "9"
+
+[[keybind]]
+command = "FloatingToTile"
+modifier = ["modkey"]
+key = "space"

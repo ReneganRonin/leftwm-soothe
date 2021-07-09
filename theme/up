@@ -8,12 +8,9 @@ if [ -f "/tmp/leftwm-theme-down" ]; then
 fi
 ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 
-
 # Boot picom or compton if it exists
 if [ -x "$(command -v picom)" ]; then
   picom --experimental-backends &> /dev/null &
-elif [ -x "$(command -v compton)" ]; then
-  compton &> /dev/null &
 fi
 
 # Set the theme.toml config
@@ -28,18 +25,11 @@ fi
 # Conky
 # ~/.config/conky/start-conky.sh
 
-if [ -x "$(command -v conky)" ]; then
-	conky &
-fi
-
 if [ -x "$(command -v flameshot)" ]; then
 	flameshot &
 fi
-
-if [ -x "$(command -v blueman-applet)" ]; then
-	blueman-applet &
-fi
-
+pipewire &
+pipewire-pulse &
 if [ -x "$(command -v nm-applet)" ]; then
 	nm-applet &
 fi
@@ -48,13 +38,11 @@ if [ -x "$(command -v copyq)" ]; then
 	copyq &
 fi
 
-if [ -x "$(command -v pipewire)" ]; then
-       pipewire &
+if [ -x "$(command -v dunst)" ]; then
+	dunst &
 fi
 
-if [ -x "$(command -v pipewire-pulse)" ]; then
-       pipewire-pulse &
-fi
+~/.gtk.sh &
 
 index=0
 monitor="$(polybar -m | grep +0+0 | sed s/:.*// | tac)"
@@ -64,4 +52,3 @@ do
   monitor=$monitor offsetx=$x width=$width polybar -c $SCRIPTPATH/polybar.config $barname &> /dev/null &
   let index=index+1
 done
-
