@@ -13,8 +13,6 @@ pkill compton
 pkill picom
 pkill polybar
 pkill conky
-pkill pipewire
-pkill pipewire-pulse
 pkill spotifyd
 pkill flameshot
 pkill redshift
