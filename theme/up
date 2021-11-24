@@ -28,8 +28,6 @@ fi
 if [ -x "$(command -v flameshot)" ]; then
 	flameshot &
 fi
-pipewire &
-pipewire-pulse &
 if [ -x "$(command -v nm-applet)" ]; then
 	nm-applet &
 fi
@@ -41,8 +39,6 @@ fi
 if [ -x "$(command -v dunst)" ]; then
 	dunst &
 fi
-
-~/.gtk.sh &
 
 index=0
 monitor="$(polybar -m | grep +0+0 | sed s/:.*// | tac)"
